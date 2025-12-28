@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phoenix Tuition Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="glass navbar">
+    <h2>Phoenix Tuition Center</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#timetable">Timetable</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#marks">TP Marks</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button onclick="login()">Teacher Login</button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content glass">
+        <h1>Rise. Learn. Succeed.</h1>
+        <p>Premium coaching with excellence and discipline</p>
+    </div>
+</section>
+
+<section id="about" class="section glass">
+    <h2>About Phoenix Tuition Center</h2>
+    <p>
+        Phoenix Tuition Center provides high-quality education with
+        personalized attention, helping students rise stronger and smarter.
+    </p>
+</section>
+
+<section id="timetable" class="section glass">
+    <h2>Class Timetable</h2>
+    <table contenteditable="false" id="timetableTable">
+        <tr><th>Day</th><th>Subject</th><th>Time</th></tr>
+        <tr><td>Monday</td><td></td><td>4:00 - 6:00</td></tr>
+        <tr><td>Tuesday</td><td></td><td> 4:00- 6:00</td></tr>
+         <tr><td>Wednesday</td><td></td><td> 4:00- 6:00</td></tr>
+          <tr><td>Thursday</td><td></td><td> 4:00- 6:00</td></tr>
+           <tr><td>Friday</td><td></td><td> 4:00- 6:00</td></tr>
+            <tr><td>Saturday</td><td></td><td> 4:00- 6:00</td></tr>
+             <tr><td>Sunday</td><td></td><td> 9:00- 11:00</td></tr>
+    </table>
+</section>
+
+<section id="assignments" class="section glass">
+    <h2>Assignments</h2>
+    <div id="assignmentList"></div>
+    <div class="teacher-only hidden">
+        <input id="assTitle" placeholder="Title">
+        <textarea id="assDesc" placeholder="Description"></textarea>
+        <button onclick="addAssignment()">Add Assignment</button>
+    </div>
+</section>
+
+<section id="marks" class="section glass">
+    <h2>Test / TP Marks</h2>
+    <table contenteditable="false" id="marksTable">
+        <tr><th>Name</th><th>Test</th><th>Marks</th></tr>
+        <tr><td>Student A</td><td>TP1</td><td>85</td></tr>
+    </table>
+</section>
+
+<section id="gallery" class="section glass">
+    <h2>Gallery</h2>
+    <input type="file" class="teacher-only hidden" accept="image/*" onchange="uploadImage(event)">
+    <div class="gallery" id="galleryContainer"></div>
+</section>
+
+<section id="contact" class="section glass">
+    <h2>Contact Us</h2>
+    <p>📍 Phoenix Tuition Center</p>
+    <p>📞 +91 96567 71140</p>
+       <p>📞 +91 99959 17581</p>
+    <p>📧 phoenix.tuition@email.com</p>
+</section>
+
+<footer>
+    © 2025 Phoenix Tuition Center
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
